@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'codes-ng-lib';
+  selectedColor = '#hhhhhh';
+
+  setBackgroundColor(color: string) {
+    this.selectedColor = color;
+  }
 }
