@@ -17,8 +17,7 @@
     ],
     "paths": {
       "codes-ng": [
-        "dist/codes-ng/codes-ng",
-        "dist/codes-ng"
+        "./projects/codes-ng/src/public-api.ts"
       ]
     }
   },

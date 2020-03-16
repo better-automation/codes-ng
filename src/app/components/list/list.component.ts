@@ -1,5 +1,5 @@
-import { Component, Output, EventEmitter, forwardRef } from '@angular/core';
-import { CODES_ACCESSOR, Codes, Code } from 'codes-ng';
+import { Component, Output, EventEmitter, forwardRef, Input } from '@angular/core';
+import { CODES_ACCESSOR, CodesComponent, Code } from 'codes-ng';
 
 @Component({
   selector: 'app-list',
@@ -10,7 +10,7 @@ import { CODES_ACCESSOR, Codes, Code } from 'codes-ng';
     useExisting: forwardRef(() => ListComponent)
   }]
 })
-export class ListComponent implements Codes {
+export class ListComponent implements CodesComponent {
   public codes: Code[];
 
   @Output() select = new EventEmitter<void>();

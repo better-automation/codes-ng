@@ -1,4 +1,4 @@
 import { InjectionToken } from '@angular/core';
-import { Codes } from './codes';
+import { CodesComponent } from './codes-component';
 
-export const CODES_ACCESSOR = new InjectionToken<Codes>('CodesAccessor');
+export const CODES_ACCESSOR = new InjectionToken<CodesComponent>('CodesAccessor');

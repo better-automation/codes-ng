@@ -1,0 +1,11 @@
+.item {
+    margin-top: 1rem;
+}
+
+.border {
+    border: 1rem solid;
+}
+
+label {
+    display: block;
+}

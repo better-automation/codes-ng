@@ -1,6 +1,25 @@
-<div [ngStyle]="{
-  'background': selectedColor,
-  'width': '100%'
-}">
-  <app-list appColors (select)="setBackgroundColor($event)"></app-list>
+<div class="border" [ngStyle]="{ 'borderColor': color }">
+  <div class="item">
+    <label>Color</label>
+    <app-list #colorsList
+      [appAllColors]="colorType === 'ALL'"
+      [appCustomColors]="colorType === 'CUSTOM_ONLY'"
+      [appDefaultColors]="colorType === 'DEFAULT_ONLY'"
+      (select)="color = $event">
+    </app-list>
+  </div>
+
+  <div class="item">
+    <label>Color Type</label>
+    <app-list
+      appColorTypes
+      (select)="colorType = $event">
+    </app-list>
+  </div>
+
+  <div class="item">
+    <button (click)="updateCustomColors()">
+      {{ hasCustomColors ? 'Remove Custom Colors' : 'Add Custom Colors' }}
+    </button>
+  </div>
 </div>

@@ -1,5 +1,0 @@
-<select *ngIf="codes" (change)="onSelect($event.target.value)" >
-    <option *ngFor="let code of codes" [value]="code.value">
-        {{ code.label }}
-    </option>
-</select>
