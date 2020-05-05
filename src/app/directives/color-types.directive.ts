@@ -11,6 +11,8 @@ export class ColorTypesDirective implements CodesDirective {
     @Input() set appColorTypes(enabled: boolean) { }
 
     getCodes() {
+        console.log('getting appColorTypes')
+
         return COLOR_TYPE_CODES;
     }
 

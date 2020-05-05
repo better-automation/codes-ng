@@ -7,11 +7,10 @@ import { CustomColorsService } from '../services/custom-colors.service';
 })
 @Codes('appCustomColors')
 export class CustomColorsDirective implements CodesDirective {
-    @Input() set appCustomColors(enabled: boolean) { 
-        console.log('directive setter', enabled);
-    }
+    @Input() set appCustomColors(enabled: boolean) { }
 
     getCodes() {
+        console.log('getting appCustomColors')
         return this.customColors.getCustomColors();
     }
 

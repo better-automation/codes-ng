@@ -11,6 +11,8 @@ export class AllColorsDirective implements CodesDirective {
     @Input() set appAllColors(enabled: boolean) { }
 
     getCodes() {
+        console.log('getting appAllColors');
+
         return this.customColors.getCustomColors()
             .then(customColors => 
                 DEFAULT_COLOR_CODES.concat(customColors)

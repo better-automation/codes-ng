@@ -10,6 +10,7 @@ export class DefaultColorsDirective implements CodesDirective {
     @Input() set appDefaultColors(enabled: boolean) { }
 
     getCodes() {
+        console.log('getting appDefaultColors')
         return DEFAULT_COLOR_CODES;
     }
 
